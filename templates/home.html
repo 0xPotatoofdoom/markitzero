@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div style="padding: 15px; color: black;"></div>
+
+Pick a game type
+<div class="form-group">
+  <label for="sel1">Select list:</label>
+  <select class="form-control" id="sel1">
+    <option>Pool</option>
+    <option>Basketball</option>
+    <option>Baseball</option>
+    <option>Other</option>
+  </select>
+</div>
+
+How Many Players
+<div class="form-group">
+    <input type="number" class="form-control" id="usr1">
+</div>
+
+How Many Rounds
+<div class="form-group">
+  <label for="sel1">Select:</label>
+  <select class="form-control" id="sel1">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+  </select>
+</div>
+
+Final score
+<div class="form-group">
+    <label for="usr1">Player 1</label>
+    <input type="text" class="form-control" id="usr1">
+    <label for="usr2">Player 2</label>
+    <input type="text" class="form-control" id="usr2">
+</div>
+
+Bets
+<div class="form-group">
+    <label for="usr1">Player 1</label>
+    <input type="text" class="form-control" id="usr1">
+    <label for="usr2">Player 2</label>
+    <input type="text" class="form-control" id="usr2">
+</div>
+
+<button id="submit" type="button" class="btn btn-dark">Submit</button>
+
+
+
+{% endblock %}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to MarkItZero</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <a class="navbar-brand" href="/">MarkItZero</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <button id="history" type="button" class="btn btn-dark" onclick="window.location = '/current/';">Current Games</button>
+            </li>
+            
+            <li class="nav-item">
+                <button id="history" type="button" class="btn btn-dark" onclick="window.location = '/history/';">Past Games</button>
+            </li>
+            
+            <li class="nav-item">
+                <button id="about" type="button" class="btn btn-dark" onclick="window.location = '/about/';">About</button>
+            </li>
+            <li class="nav-item">
+                <button id="enableMetamask" type="button" class="btn btn-dark">Connect</button>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>
